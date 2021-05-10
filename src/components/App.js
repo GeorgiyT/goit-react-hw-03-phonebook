@@ -42,6 +42,14 @@ class App extends React.Component {
     return this.state.contacts.filter(el => el.name.toLowerCase().includes(normalizedFilter));
   };
 
+  componentDidMount() {
+    console.log("Add componentDidMount");
+  }
+
+  componentDidUpdate() {
+    console.log("Add componentDidUpdate");
+  }
+
   render() {
     const { filter } = this.state;
     const filteredContacts = this.getFilteredContacts();
